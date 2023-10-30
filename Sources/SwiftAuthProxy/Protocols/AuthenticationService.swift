@@ -8,6 +8,9 @@
 import Foundation
 
 public protocol AuthenticationService {
-    func signup(email: String, password: String) async throws -> UserScheme
-    func signin(email: String, password: String) async throws -> UserScheme
+    associatedtype T: Codable
+    
+    @discardableResult
+    func signup(email: String, password: String) async throws -> T
+    func signin(email: String, password: String) async throws -> T
 }

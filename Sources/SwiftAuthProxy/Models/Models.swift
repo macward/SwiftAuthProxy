@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct UserScheme {
+public struct UserScheme: Codable {
     public var id: String
     public var email: String
     public var isEmailVerified: Bool
