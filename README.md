@@ -4,14 +4,14 @@ A small library that helps you create authentication flows in your application.
 
 ## Validators
 Create validations using validatable protocol.
-```
+```swift
 public protocol Validatable {
     var errorMessage: String { get set}
     func validate(_ str: String) -> Bool
 }
 ```
 then create your validation
-```
+```swift
 public class PasswordValidator: Validatable {
     public var errorMessage: String = ""
     
