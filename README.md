@@ -1,7 +1,12 @@
 # Swift Auth Proxy
-A tiny library that help you to create auth flows into your app.
+A tiny library that help you to structure and add authentcation to your app.
 
-## Authentication Service
+# Usage
+
+
+This is an showcase app suing Swift Auth Proxy [Auth App](https://github.com/macward/FirebaseLogin).
+
+### Authentication Service
 ```swift
 public protocol AuthenticationService {
     associatedtype T: Codable
@@ -35,12 +40,14 @@ public class FirebaseEmailAuthenticationService: AuthenticationService {
 
 ## Validators
 Create validations using validatable protocol.
+
 ```swift
 public protocol Validatable {
     var errorMessage: String { get set}
     func validate(_ str: String) -> Bool
 }
 ```
+
 ### Creating a validator
 
 ```swift
